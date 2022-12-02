@@ -1,22 +1,19 @@
-OPPONENT = {
-    'A': 'ROCK',
-    'B': 'PAPER',
-    'C': 'SCISSORS'
-}
+# Day 2 - Advent of Code 2022
 
-SELF = {
-    'X': 'ROCK',
-    'Y': 'PAPER',
-    'Z': 'SCISSORS'
-}
+OPPONENT = {'A': 'ROCK', 'B': 'PAPER', 'C': 'SCISSORS'}
 
-DEFEATED_BY = {
-    'ROCK': 'PAPER',
-    'PAPER': 'SCISSORS',
-    'SCISSORS': 'ROCK'
-}
+SELF = {'X': 'ROCK', 'Y': 'PAPER', 'Z': 'SCISSORS'}
 
-WINS_AGAINST = {v: k for k, v in DEFEATED_BY.items()}
+options = ['ROCK', 'PAPER', 'SCISSORS']
+
+
+def wins_against(option):
+    return options[(options.index(option) + 1) % 3]
+
+
+def loses_against(option):
+    return options[(options.index(option) - 1) % 3]
+
 
 # Part 1
 # -------------
@@ -24,26 +21,24 @@ WINS_AGAINST = {v: k for k, v in DEFEATED_BY.items()}
 
 def calculate_score(opponent: str, self: str):
 
-    OWN_SCORE = {
-        'ROCK': 1,
-        'PAPER': 2,
-        'SCISSORS': 3
-    }
-
     # Calculate the base score based in what you played.
-    score = OWN_SCORE[self]
+    score = options.index(self) + 1
 
     # If you play whatever defeats your opponent, you win.
-    if DEFEATED_BY[opponent] == self:
+    if wins_against(opponent) == self:
         return score + 6
 
     # Otherwise, if you play the same, you draw.
     elif self == opponent:
         return score + 3
 
-    # Finally, the remaining alternative is that you lost.
-    else:
+    # Finally, your opponent plays whatever wins against you, you lose.
+    elif wins_against(self) == opponent:
         return score
+
+    # Any other option fails.
+    else:
+        raise TypeError("Move must be ROCK, PAPER or SCISSORS")
 
 
 # Load the input and calculate!
@@ -60,12 +55,19 @@ print(f"If you followed the guide, you would get {sum(scores)} points.")
 
 def calculate_play(opponent: str, result: str):
 
+    # If you need to draw, return whatever the opponent played.
     if result == 'Y':
         return opponent
+
+    # If you need to lose, return whatever loses against the opponent.
     elif result == 'X':
-        return WINS_AGAINST[opponent]
+        return loses_against(opponent)
+
+    # If you need to win, return whatever wins against the opponent.
     elif result == 'Z':
-        return DEFEATED_BY[opponent]
+        return wins_against(opponent)
+
+    # Any other option fails.
     else:
         raise TypeError("Result must be 'X', 'Y', or 'Z'.")
 
