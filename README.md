@@ -5,7 +5,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 1: Calorie Counting](01-calorie_counting/)
 - [X] [Day 2: Rock Paper Scissors](02-rock_paper_scissors/)
 - [X] [Day 3: Rucksack Reorganization](03-rucksack_reorganization/)
-- [ ] Day 4
+- [X] [Day 4: Camp Cleanup](04-camp_cleanup/)
 - [ ] Day 5
 - [ ] Day 6
 - [ ] Day 7
