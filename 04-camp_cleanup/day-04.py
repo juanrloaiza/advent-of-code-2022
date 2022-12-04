@@ -11,11 +11,11 @@ for assignment in assignments:
         assignment[1]) + 1)) for assignment in assignment_list]
 
     # Part 1
-    if assignment_list[0].issubset(assignment_list[1]) or assignment_list[1].issubset(assignment_list[0]):
+    if assignment_list[0] <= assignment_list[1] or assignment_list[0] >= assignment_list[1]:
         full_overlap += 1
 
     # Part 2
-    if assignment_list[0].intersection(assignment_list[1]):
+    if assignment_list[0] & assignment_list[1]:
         partial_overlap += 1
 
 print(f"Fully overlapping sets: {full_overlap}")
