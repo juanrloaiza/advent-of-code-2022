@@ -6,7 +6,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 2: Rock Paper Scissors](02-rock_paper_scissors/)
 - [X] [Day 3: Rucksack Reorganization](03-rucksack_reorganization/)
 - [X] [Day 4: Camp Cleanup](04-camp_cleanup/)
-- [ ] Day 5
+- [X] [Day 5: Suplly Stacks](05-supply_stacks/)
 - [ ] Day 6
 - [ ] Day 7
 - [ ] Day 8
