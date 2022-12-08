@@ -9,7 +9,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 5: Supply Stacks](05-supply_stacks/)
 - [X] [Day 6: Tuning Trouble](06-tuning_trouble/)
 - [X] [Day 7: No Space Left on Device](07-no_space_left_on_device/)
-- [ ] Day 8
+- [X] [Day 8: Treetop Tree House](08-treetop_tree_house/)
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11
