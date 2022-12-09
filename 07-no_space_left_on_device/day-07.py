@@ -5,12 +5,12 @@ class Directory():
         self.name = name
         self.parent = parent
 
-    def add_child(self, name: str, size: int = 0):
-        if not size:
-            self.contents[name] = Directory(name, self)
-            return self.contents[name]
-        else:
-            self.contents[name] = File(name, size)
+    def add_subdirectory(self, name: str):
+        self.contents[name] = Directory(name, parent=self)
+        return self.contents[name]
+
+    def add_file(self, name: str, size: int):
+        self.contents[name] = File(name, size)
 
     def get_size(self) -> int:
         self.size = 0
@@ -48,16 +48,12 @@ for line in commands:
             else:
                 current_directory = current_directory.contents[line_split[2]]
 
-        # If we are listing, continue to the next line.
-        if line_split[1] == 'ls':
-            continue
-
     elif line_split[1] not in current_directory.contents:
         if line_split[0] == 'dir':
-            dir = current_directory.add_child(line_split[1])
-            directories.append(dir)
+            d = current_directory.add_subdirectory(line_split[1])
+            directories.append(d)
         else:
-            current_directory.add_child(line_split[1], size=line_split[0])
+            current_directory.add_file(line_split[1], size=line_split[0])
 
 # Part 1
 less_than_limit = [d.get_size() for d in directories if d.get_size() <= 100000]
@@ -68,8 +64,8 @@ print("Part 1:", sum(less_than_limit))
 
 TOTAL_DISK_SPACE = 70000000
 free_space = TOTAL_DISK_SPACE - root.get_size()
-needed_space = 30000000
+NEEDED_SPACE = 30000000
 
 candidates = [d for d in directories if free_space + d.get_size()
-              >= needed_space]
+              >= NEEDED_SPACE]
 print("Part 2:", sorted(candidates, key=lambda x: x.get_size())[0].get_size())
