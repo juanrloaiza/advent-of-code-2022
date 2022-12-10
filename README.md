@@ -11,7 +11,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 7: No Space Left on Device](07-no_space_left_on_device/)
 - [X] [Day 8: Treetop Tree House](08-treetop_tree_house/)
 - [X] [Day 9: Rope Bridge](09-rope_bridge/)
-- [ ] Day 10
+- [X] [Day 10: Cathode Ray-Tube](10-cathode_ray-tube/day-10.py)
 - [ ] Day 11
 - [ ] Day 12
 - [ ] Day 13
