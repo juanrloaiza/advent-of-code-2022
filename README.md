@@ -12,7 +12,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 8: Treetop Tree House](08-treetop_tree_house/day-08.py)
 - [X] [Day 9: Rope Bridge](09-rope_bridge/day-09.py)
 - [X] [Day 10: Cathode Ray-Tube](10-cathode_ray-tube/day-10.py)
-- [ ] Day 11
+- [X] [Day 11: Monkey in the Middle](11-monkey_in_the_middle/day-11.py)
 - [ ] Day 12
 - [ ] Day 13
 - [ ] Day 14

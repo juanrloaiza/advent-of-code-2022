@@ -3,7 +3,7 @@ with open('input.txt') as file:
 
 x = 1
 stack = []
-screen = [['.' for _ in range(40)] for _ in range(6)]
+screen = [['⬛' for _ in range(40)] for _ in range(6)]
 
 for cycle, instruction in enumerate(instructions):
     stack += [0]
@@ -18,7 +18,7 @@ def draw_CRT():
 
 
 def get_character(x: int, cycle: int):
-    return '#' if x <= cycle % 40 + 1 and x >= cycle % 40 - 1 else '.'
+    return '⬜' if x <= cycle % 40 + 1 and x >= cycle % 40 - 1 else '⬛'
 
 
 signal_strengths = []
