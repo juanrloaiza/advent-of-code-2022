@@ -5,8 +5,7 @@ class Monkey:
     def __init__(self, info: dict):
 
         self.items = [int(x) for x in info["Starting items"].split(',')]
-        self.operation = eval(
-            f"lambda old: {' '.join(info['Operation'].split()[2:])}")
+        self.operation = eval(f"lambda old: {info['Operation'][5:]}")
 
         self.modulo = int(info["Test"].split()[-1])
         self.test = lambda x: x % self.modulo == 0
@@ -39,7 +38,7 @@ def setup() -> list:
     return monkeys
 
 
-def round(part: int, monkeys: list):
+def play_round(part: int, monkeys: list):
     m = reduce(lambda x, y: x*y, [m.modulo for m in monkeys])
     for monkey in monkeys:
         while monkey.items:
@@ -58,17 +57,16 @@ def round(part: int, monkeys: list):
                 monkey.throw(monkeys[monkey.if_false], worry_level)
 
 
-def play(part: int, rounds: int):
+def simulate(part: int, rounds: int):
     monkeys = setup()
 
     for _ in range(rounds):
-        round(part, monkeys)
-        print(_)
+        play_round(part, monkeys)
 
     top_monkey_business = sorted(
         [monkey.items_inspected for monkey in monkeys], reverse=True)[:2]
     return reduce(lambda x, y: x * y, top_monkey_business)
 
 
-print("Part 1:", play(1, 20))
-print("Part 2:", play(2, 10000))
+print("Part 1:", simulate(1, 20))
+print("Part 2:", simulate(2, 10000))
