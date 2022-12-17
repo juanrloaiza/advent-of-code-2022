@@ -14,7 +14,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 10: Cathode Ray-Tube](10-cathode_ray-tube/day-10.py)
 - [X] [Day 11: Monkey in the Middle](11-monkey_in_the_middle/day-11.py)
 - [X] [Day 12: Hill Climbing Algorithm](12-hill_climbing_algorithm/day-12.py)
-- [ ] Day 13
+- [X] [Day 13: Distress Signal](13-distress_signal/day-13.py)
 - [ ] Day 14
 - [ ] Day 15
 - [ ] Day 16
