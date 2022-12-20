@@ -16,7 +16,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 12: Hill Climbing Algorithm](12-hill_climbing_algorithm/day-12.py)
 - [X] [Day 13: Distress Signal](13-distress_signal/day-13.py)
 - [X] [Day 14: Regolith Reservoir](14-regolith_reservoir/day-14.py)
-- [ ] Day 15
+- [x] [Day 15: Beacon Exclusion Zone](15-beacon_exclusion_zone/day-15.py)
 - [ ] Day 16
 - [ ] Day 17
 - [ ] Day 18

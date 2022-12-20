@@ -15,7 +15,6 @@ class Grid:
         self.sand_at_rest = 0
         self.part1 = False
         self.part2 = False
-        self.frames = []
 
         with open('input.txt') as file:
             raw_paths = file.readlines()
@@ -64,7 +63,6 @@ class Grid:
         img.putdata(pixels)
 
         img.resize((width * 10, height * 10), Image.Resampling.NEAREST)
-        self.frames.append(img)
         img.show()
 
     def update(self):
