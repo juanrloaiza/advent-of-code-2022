@@ -2,13 +2,13 @@ with open('input.txt') as file:
     instructions = file.readlines()
 
 x = 1
-stack = []
+queue = []
 screen = [['⬛' for _ in range(40)] for _ in range(6)]
 
 for cycle, instruction in enumerate(instructions):
-    stack += [0]
+    queue += [0]
     if instruction.split()[0] == 'addx':
-        stack += [int(instruction.split()[1])]
+        queue += [int(instruction.split()[1])]
 
 
 def draw_CRT():
@@ -22,7 +22,7 @@ def get_character(x: int, cycle: int):
 
 
 signal_strengths = []
-for cycle, instruction in enumerate(stack):
+for cycle, instruction in enumerate(queue):
     if cycle + 1 in [20, 60, 100, 140, 180, 220]:
         signal_strengths.append(x * (cycle + 1))
 
