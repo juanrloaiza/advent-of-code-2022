@@ -17,7 +17,7 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [X] [Day 13: Distress Signal](13-distress_signal/day-13.py)
 - [X] [Day 14: Regolith Reservoir](14-regolith_reservoir/day-14.py)
 - [x] [Day 15: Beacon Exclusion Zone](15-beacon_exclusion_zone/day-15.py)
-- [ ] Day 16
+- [X] [Day 16: Proboscidea Volcanium*](16-proboscidea_volcanium/day-16.py)
 - [ ] Day 17
 - [ ] Day 18
 - [ ] Day 19
@@ -27,3 +27,5 @@ Here are my solutions to [Advent of Code 2022](https://adventofcode.com/2022).
 - [ ] Day 23
 - [ ] Day 24
 - [ ] Day 25
+
+* Not actually solved, but looked up and adapted from elsewhere.
